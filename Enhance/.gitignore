@@ -1,0 +1,9 @@
+/models
+/pre_trained
+*.pyc
+/output
+
+
+/data/*
+!/data/meanfoggy
+!/data/meanfoggy/meanfoggy.jpg
