@@ -72,9 +72,12 @@ It should be noted that the test file is only used for debugging the style enhan
 cd Enhance
 # an example for pascal voc -> clipart
 python test.py --vgg pre_trained/vgg16_ori.pth --decoder models/voc2clipart/decoder_iter_160000.pth --fc1 models/voc2clipart/fc1_iter_160000.pth --fc2 models/voc2clipart/fc2_iter_160000.pth --content_dir data/voc2clipart --style_dir data/voc2clipart --output output/voc2clipart --alpha 1.0
+# an example for cityscape -> foggy cityscape
+python test.py --vgg pre_trained/vgg16_cityscape.pth --decoder models/city2foggy/decoder_iter_160000.pth --fc1 models/city2foggy/fc1_iter_160000.pth --fc2 models/city2foggy/fc2_iter_160000.pth --content_dir data/city2foggy --style_dir data/meanfoggy --output output/city2foggy --alpha 1.0
 ```
 
 ## Overlooking style module
+For PASCAL VOC to Clipart and PASCAL VOC to Watercolor, we use Resnet101 as our backbone. For Cityscapes to Foggy-Cityscapes and KITTI to Cityscape, we use VGG16 as our backbone.
 ### Compilation
 
 Compile the cuda dependencies using following simple commands:
@@ -92,6 +95,8 @@ cd Overlook
 ln -s [your dataset dir] data
 ```
 To prepare the datasets, please refer to [krumo/Detectron-DA-Faster-RCNN](https://github.com/krumo/Detectron-DA-Faster-RCNN#usage-example), [tiancity-NJU/da-faster-rcnn-PyTorch](https://github.com/tiancity-NJU/da-faster-rcnn-PyTorch) and [VisionLearningGroup/DA_Detection](https://github.com/VisionLearningGroup/DA_Detection#data-preparation).
+
+**Note that for the Foggy-Cityscapes dataset, we use the foggy level of 0.02**
 ### Train the source detector
 Run the following commands to train the source detector.
 ```bash
