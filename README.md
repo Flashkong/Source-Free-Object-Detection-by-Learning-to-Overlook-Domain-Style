@@ -77,7 +77,9 @@ python test.py --vgg pre_trained/vgg16_cityscape.pth --decoder models/city2foggy
 ```
 
 ## Overlooking style module
-For PASCAL VOC to Clipart and PASCAL VOC to Watercolor, we use Resnet101 as our backbone. For Cityscapes to Foggy-Cityscapes and KITTI to Cityscape, we use VGG16 as our backbone.
+**We use the standard Faster R-CNN as the teacher and student. For PASCAL VOC to Clipart and PASCAL VOC to Watercolor, we use Resnet101 as our backbone. For Cityscapes to Foggy-Cityscapes and KITTI to Cityscape, we use VGG16 (without batchnorm) as our backbone.**
+
+**Note that for the Foggy-Cityscapes dataset, we use the foggy level of 0.02. For Clipart dataset, we use all 1K images for both train and test.**
 ### Compilation
 
 Compile the cuda dependencies using following simple commands:
@@ -96,7 +98,6 @@ ln -s [your dataset dir] data
 ```
 To prepare the datasets, please refer to [krumo/Detectron-DA-Faster-RCNN](https://github.com/krumo/Detectron-DA-Faster-RCNN#usage-example), [tiancity-NJU/da-faster-rcnn-PyTorch](https://github.com/tiancity-NJU/da-faster-rcnn-PyTorch) and [VisionLearningGroup/DA_Detection](https://github.com/VisionLearningGroup/DA_Detection#data-preparation).
 
-**Note that for the Foggy-Cityscapes dataset, we use the foggy level of 0.02**
 ### Train the source detector
 Run the following commands to train the source detector.
 ```bash
