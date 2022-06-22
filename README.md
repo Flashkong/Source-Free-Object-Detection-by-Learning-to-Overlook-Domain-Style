@@ -2,7 +2,7 @@
 
 This is the offical implementation of our CVPR 2022 work 'Source-Free Object Detection by Learning to Overlook Domain Style'. We aim to solve the source-free object detetion problem from a novel perspective of overlooking target domain style. The original paper can be found [here](https://openaccess.thecvf.com/content/CVPR2022/html/Li_Source-Free_Object_Detection_by_Learning_To_Overlook_Domain_Style_CVPR_2022_paper.html).
 
-Our paper has been selected for an **ORAL** presentation, the presentation video can be found here(TBD).
+Our paper has been selected for an **ORAL** presentation, the presentation video can be found [here](https://www.youtube.com/watch?v=A7vBStzBZLY).
 
 If you find it helpful for your research, please consider citing:
 
