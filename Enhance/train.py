@@ -142,7 +142,7 @@ for i in tqdm(range(args.max_iter)):
     loss_c,loss_const = network(content_images, style_images,args.scenario_name,flag=0)
     loss_c = args.content_weight * loss_c
     loss_const=args.constrain_weight *loss_const
-    loss = loss =  loss_c + loss_const
+    loss = loss_c + loss_const
 
     optimizer1.zero_grad()
     optimizer2.zero_grad()
