@@ -172,15 +172,15 @@ for i in tqdm(range(args.max_iter)):
         state_dict = net.decoder.state_dict()
         for key in state_dict.keys():
             state_dict[key] = state_dict[key].to(torch.device('cpu'))
-        torch.save(state_dict, args.save_dir /
-                'decoder_iter_{:d}.pth'.format(i + 1))
+        torch.save(state_dict, args.save_dir +
+                '/decoder_iter_{:d}.pth'.format(i + 1))
         state_dict = net.fc1.state_dict()
         for key in state_dict.keys():
             state_dict[key] = state_dict[key].to(torch.device('cpu'))
-        torch.save(state_dict, args.save_dir /
-                'fc1_iter_{:d}.pth'.format(i + 1))
+        torch.save(state_dict, args.save_dir +
+                '/fc1_iter_{:d}.pth'.format(i + 1))
         state_dict = net.fc2.state_dict()
         for key in state_dict.keys():
             state_dict[key] = state_dict[key].to(torch.device('cpu'))
-        torch.save(state_dict, args.save_dir /
-                'fc2_iter_{:d}.pth'.format(i + 1))
+        torch.save(state_dict, args.save_dir +
+                '/fc2_iter_{:d}.pth'.format(i + 1))
