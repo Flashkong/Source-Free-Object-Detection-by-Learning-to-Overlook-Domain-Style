@@ -16,10 +16,10 @@ If you find it helpful for your research, please consider citing:
     pages     = {8014-8023}
 }
 ```
+## Supplement
+**We use the standard Faster R-CNN as the teacher and student. For PASCAL VOC to Clipart and PASCAL VOC to Watercolor, we use Resnet101 as our backbone. For Cityscapes to Foggy-Cityscapes and KITTI to Cityscape, we use VGG16 (without batchnorm) as our backbone.**
 
-## Acknowledgment
-
-The implementation is built on the python implementation of Faster RCNN [rbgirshick/py-faster-rcnn](https://github.com/rbgirshick/py-faster-rcnn) and Arbitrary Style Transfer [naoto0804/pytorch-AdaIN](https://github.com/naoto0804/pytorch-AdaIN).
+**Note that for the Foggy-Cityscapes dataset, we use the foggy level of 0.02. For Clipart dataset, we use all 1K images for both training and testing.**
 
 ## Requirements
 
@@ -77,9 +77,7 @@ python test.py --vgg pre_trained/vgg16_cityscape.pth --decoder models/city2foggy
 ```
 
 ## Overlooking style module
-**We use the standard Faster R-CNN as the teacher and student. For PASCAL VOC to Clipart and PASCAL VOC to Watercolor, we use Resnet101 as our backbone. For Cityscapes to Foggy-Cityscapes and KITTI to Cityscape, we use VGG16 (without batchnorm) as our backbone.**
 
-**Note that for the Foggy-Cityscapes dataset, we use the foggy level of 0.02. For Clipart dataset, we use all 1K images for both training and testing.**
 ### Compilation
 
 Compile the cuda dependencies using following simple commands:
@@ -177,3 +175,7 @@ And run the following command to test the trained models one by one.
 # an example for Pascal VOC -> Clipart
 python test_target.py --dataset voc2clipart --tm target --lm [your model path] --net res101 --cuda
 ```
+
+## Acknowledgment
+
+The implementation is built on the python implementation of Faster RCNN [rbgirshick/py-faster-rcnn](https://github.com/rbgirshick/py-faster-rcnn) and Arbitrary Style Transfer [naoto0804/pytorch-AdaIN](https://github.com/naoto0804/pytorch-AdaIN).
