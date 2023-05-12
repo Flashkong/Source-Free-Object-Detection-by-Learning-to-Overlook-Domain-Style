@@ -178,4 +178,4 @@ python test_target.py --dataset voc2clipart --tm target --lm [your model path] -
 
 ## Acknowledgment
 
-The implementation is built on the python implementation of Faster RCNN [rbgirshick/py-faster-rcnn](https://github.com/rbgirshick/py-faster-rcnn) and Arbitrary Style Transfer [naoto0804/pytorch-AdaIN](https://github.com/naoto0804/pytorch-AdaIN).
+The implementation is built on the python implementation of Faster RCNN [jwyang/faster-rcnn.pytorch](https://github.com/jwyang/faster-rcnn.pytorch) and Arbitrary Style Transfer [naoto0804/pytorch-AdaIN](https://github.com/naoto0804/pytorch-AdaIN).
